@@ -27,5 +27,7 @@ jobs:
       - run: npm cache clean --force
       - run: rm -rf node_modules package-lock.json
       - run: npm install
+      - run: npm install --global gatsby-cli
       - run: npm install gatsby-cli
+      - run: gatsby -v
       - run: gatsby build && gh-pages -d public -b master
