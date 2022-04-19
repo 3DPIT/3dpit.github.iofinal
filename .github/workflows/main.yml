@@ -1,8 +1,8 @@
-name: Publish
+name: github pages
 
 on:
   push:
-    tags:
+    branches:
       - main
 
 jobs:
