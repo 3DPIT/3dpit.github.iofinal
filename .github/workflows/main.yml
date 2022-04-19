@@ -1,21 +1,26 @@
-name: CI
 on:
   push:
     branches:
-      - main
+      - gh-pages
+name: build gatsby
 jobs:
-  build:
+  build_gatsby:
+    name: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: build
-        run: npm run build
-      - name: GitHub Pages
-        if: success()
-        with:
-          target_branch: master
-          build_dir: public
-        uses: crazy-max/ghaction-github-pages@v1.2.5
+
+      - name: yarn install
+        run: yarn install
+
+      - name: gatsby build
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          GITHUB_PAT: ${{ secrets.GH_PAT }}
+          GH_API_KEY: ${{ secrets.GH_PAT }}
+        run: yarn build
+
+      - name: deploy
+        uses: maxheld83/ghpages@v0.2.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          BUILD_DIR: 'public/'
