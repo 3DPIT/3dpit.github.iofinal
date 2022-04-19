@@ -8,8 +8,6 @@
     "url": "https://github.com/3dpit/gatsby-starter-bee/issues"
   },
   "dependencies": {
-    "node": "14.17.6",
-    "npm": "6.4.15",
     "gatsby": "^2.2.8",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-feed": "^2.1.0",
