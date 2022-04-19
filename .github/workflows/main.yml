@@ -28,5 +28,4 @@ jobs:
       - run: rm -rf node_modules package-lock.json
       - run: npm install
       - run: npm install --global gatsby-cli
-      - run: npm install gatsby-cli
-      - run: npm gatsby build && gh-pages -d public -b master
+      - run: npm run deploy
