@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-bee",
+  "name": "3dpit-study-blog",
   "private": true,
   "description": "Gatsby blog starter template",
   "version": "0.1.0",
-  "author": "Jbee[3dpit]<oksos1105@gmail.com>",
+  "author": "kyeongminPark[3dpit]<oksos1105@gmail.com>",
   "bugs": {
     "url": "https://github.com/3dpit/gatsby-starter-bee/issues"
   },
